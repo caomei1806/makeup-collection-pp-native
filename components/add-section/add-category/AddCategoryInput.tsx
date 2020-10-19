@@ -8,7 +8,13 @@ export const AddCategoryInput = () => {
 	return (
 		<View style={styles.container}>
 			<TextInput style={styles.input} placeholder="Add category"></TextInput>
-			<Pressable><View style={styles.addButton}><Image source={require("../../../assets/icons/plus-regular-240.png")}style={styles.addButtonIcon} /></View></Pressable>
+			<Pressable style={({ pressed }) => [
+          {
+            backgroundColor: pressed
+              ? 'rgba(83, 218, 218, 0.5)'
+              : '#e2e2e2'
+          }, styles.buttonPressedShadow
+        ]}><View style={styles.addButton}><Image source={require("../../../assets/icons/plus-regular-240.png")}style={styles.addButtonIcon} /></View></Pressable>
 		</View>
 	)
 }
@@ -40,6 +46,14 @@ const styles = StyleSheet.create({
 		width: 55,
 		height: 55,
 		borderRadius: 30,
+		display: "flex",
+		alignItems: "center",
+		justifyContent: "center"
+	},
+	buttonPressedShadow: {
+		width: 65,
+		height: 65,
+		borderRadius: 40,
 		display: "flex",
 		alignItems: "center",
 		justifyContent: "center"
