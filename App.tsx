@@ -27,7 +27,7 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 import { NativeRouter, Route, Link } from "react-router-native";
 import { BottomNav } from './components/bottom-nav/BottomNav';
-import { TopNav } from './components/top-nav/TopNav';
+import {TopNav} from "./components/top-nav/TopNav";
 import { Add } from './screens/Add';
 import { Collection } from './screens/Collection';
 import { Home } from './screens/Home';
